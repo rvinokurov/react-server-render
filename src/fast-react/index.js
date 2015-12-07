@@ -26,7 +26,11 @@ module.exports = {
 
         if(arguments.length >= 2) {
             for(let i = 2,  l = arguments.length; i < l; i++) {
-                html += arguments[i];
+                let chunk = arguments[i];
+                if(chunk instanceof Array) {
+                    chunk = chunk.join('');
+                }
+                html += chunk;
             }
         }
 
