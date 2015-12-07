@@ -11,7 +11,7 @@ let  _  = require('lodash');
 
 const getData = () => {
     let data = [];
-    _.each(_.range(1000), i =>  {
+    _.each(_.range(10000), i =>  {
         data.push({
             id: i,
             author: `Pete Hunt ${Math.random()}`,
@@ -24,7 +24,7 @@ const getData = () => {
 router.get('/', function(req, res, next) {
     let start = 0, data = getData();
     start = Date.now();
-    let html = React.renderToString(
+    let html = React.compile(
         <Main data={data}/>
     );
     console.log('render time ms', Date.now() - start);

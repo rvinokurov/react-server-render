@@ -34,11 +34,10 @@ module.exports = {
             return '<' + component + '>' + html + '</' + component + '>';
         }
         props.children = html;
-        console.log(component);
         return component.apply({props:props});
     },
 
-    renderToString : function(component) {
+    compile : function(component) {
         return component;
     }
 };
