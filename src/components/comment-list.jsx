@@ -1,5 +1,6 @@
 'use strict';
-const React = require('react');
+// const React = require('react');
+const React = require('../fast-react/index.js');
 const Comment = require('./comment');
 const _ = require('lodash');
 

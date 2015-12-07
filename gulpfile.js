@@ -16,7 +16,8 @@ const babelPaths = [
 
 const copyPaths = [
     'public/**/*',
-    'views/**/*'
+    'views/**/*',
+    'fast-react/**/*'
 ];
 
 const filterJsx = [
